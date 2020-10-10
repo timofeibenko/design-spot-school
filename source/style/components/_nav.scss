@@ -1,0 +1,117 @@
+.nav {
+    @include flexible(space-between, center, row, nowrap);
+    height: 48px;
+    background-color: $black;
+
+    &__logo {
+        @include flexible (center, center, row, nowrap);
+        height: 100%;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 20px;
+        line-height: 48px;
+    }
+
+    &__logo-item {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: 20px;
+        text-transform: capitalize;
+        border-right: 1px solid $white;
+        background-color: $black;
+        color: $white;
+        
+        &:nth-child(1) {
+            z-index: 11;
+        }
+
+        &:nth-child(2) {
+            right: 4px;
+            z-index: 10;
+        }
+
+        &:nth-child(3) {
+            right: 8px;
+            z-index: 9;
+        }
+
+        &:nth-child(4) {
+            @include logo-elem-position(11px, 18px, 8);
+        }
+
+        &:nth-child(5) {
+            @include logo-elem-position(11px, 15px, 7);
+        }
+
+        &:nth-child(6) {
+            @include logo-elem-position(15px, 19px, 6);
+        }
+
+        &:nth-child(7) {
+            @include logo-elem-position(18px, 18px, 5);
+        }
+
+        &:nth-child(8) {
+            @include logo-elem-position(21px, 18px, 4);
+        }
+
+        &:nth-child(9) {
+            @include logo-elem-position(24px, 18px, 3);
+        }
+
+        &:nth-child(10) {
+            @include logo-elem-position(27px, 18px, 2);
+        }
+
+        &:nth-child(11) {
+            @include logo-elem-position(29px, 17px, 1);
+        }
+    }
+
+    &__burger {
+        position: relative;
+        height: 3px;
+        width: 30px;
+        margin: 0 20px 10px 0;
+        background-color: $aquamarine;
+
+        @include md {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+
+            @extend .nav__burger;
+        }
+    }
+
+    &__list {
+        display: none;
+
+        @include md {
+            display: block;
+            height: 48px;
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
+        margin: 0 1em;
+        padding-bottom: 10px;
+
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 48px;
+        color: $dark-grey;
+
+        &:hover {
+            border-bottom: 3px solid $aquamarine;
+            font-weight: 500;
+            color: $aquamarine;
+        }
+    }
+}
+

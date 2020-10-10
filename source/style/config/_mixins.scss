@@ -1,0 +1,56 @@
+// Typography
+
+// Flexbox
+
+@mixin flexible($axis-x, $axis-y, $direction, $wrap) {
+    display: flex;
+    justify-content: $axis-x;
+    align-items: $axis-y;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}  
+
+// Logo elements positioning 
+
+@mixin logo-elem-position($position, $width, $layer) {
+    right: $position;
+    width: $width;
+    z-index: $layer;
+}
+
+//Adaptiveness
+
+// small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+ 
+ // medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+ 
+ // large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+ 
+ // extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+ // custom devices
+@mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
