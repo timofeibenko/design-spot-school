@@ -570,17 +570,40 @@ html {
 }
 
 .nav__link {
+  position: relative;
   margin: 0 1em;
-  padding-bottom: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 48px;
   color: #BABCC1;
 }
 
+@media (min-width: 992px) {
+  .nav__link {
+    margin: 0 1.5em;
+  }
+}
+
 .nav__link:hover {
-  border-bottom: 3px solid #61FFD9;
   font-weight: 500;
   color: #61FFD9;
+}
+
+.nav__link:hover::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -3px;
+  display: block;
+  height: 3px;
+  width: calc(100% + 5px);
+  background-color: #61FFD9;
+}
+
+@media (min-width: 992px) {
+  .nav__link:hover::after {
+    width: calc(100% + 44px);
+    left: -22px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
