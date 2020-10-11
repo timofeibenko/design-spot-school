@@ -1,0 +1,111 @@
+.header {
+
+    &__title {
+        padding-top: 5px;
+        padding-left: 0.4em;
+
+        background: url(../img/header/stripes.svg) no-repeat;
+        background-size: 9%;
+
+        font-size: 11vw;
+        font-weight: 400;
+        color: $white;
+
+        @include md {
+            background-size: 75px;
+            font-size: 88px;
+        }
+    }
+
+    &__subtitles {
+        @include flexible(flex-start, flex-end, column, nowrap);
+        padding-right: 10px;
+    }
+
+    &__stage {
+        padding-bottom: 5px;
+        font-size: calc(10px + 0.8vw);
+        font-weight: 400;
+        color: $dark-grey;
+
+        @include md {
+            font-size: 16px;
+        }
+    }
+
+    &__date {
+        font-size: calc(10px + 1.3vw);
+        font-weight: 500;
+        color: $light-grey;
+
+        @include md {
+            font-size: 20px;
+        }
+    }
+
+    &__descr {
+        max-width: 600px;
+        padding: 3em 0 48px 1.3em;
+
+        font-size: calc(10px + 3vw);
+        font-weight: 400;
+        color: $white;
+
+        @include md {
+            padding: 126px 0 48px 60px;
+            font-size: 32px;
+        }
+    }
+
+    &__subscr-btn {
+        @include btn(15px 7.1em, 2em, calc(10px + 1.3vw));
+
+        @include md {
+            @include btn(15px 7.1em, 60px, 20px);
+        }
+    }
+
+    &__video {
+        @include flexible(center, center, row, nowrap);
+
+        margin-top: 14vw;
+        background: url(../img/header/thumbnail.png) 85%  no-repeat;
+        background-size: cover;
+
+        @include md {
+            height: 517px;
+            margin-top: 108px;
+        }
+    }
+
+    &__play-btn {
+        position: relative;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        border: none;
+        color: white;
+        padding: 25px;
+        margin: 9em 0;
+        border: 1px solid #ECEAEA;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            right: 12px;
+            top: 15px;
+
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 20px solid #ECEAEA;
+            border-bottom: 10px solid transparent;
+        }
+    }
+}
