@@ -18,6 +18,27 @@
     z-index: $layer;
 }
 
+// Subscribe button 
+
+@mixin btn($padding, $margin, $font) {
+    background-color: $blue;
+    border: none;
+    color: white;
+    padding: $padding;
+    margin-left: $margin;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    font-size: $font;
+}
+
+// Background gradient
+
+@mixin background-gradient($direction) {
+    background: linear-gradient($direction, $primary-color, $second-color);
+  }
+
 //Adaptiveness
 
 // small devices
