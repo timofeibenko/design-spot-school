@@ -1,0 +1,16 @@
+.main__mentors-applicants-container {
+    margin-top: 66px ;
+
+    @include lg {
+        @include flexible(center, center, row, nowrap);
+    }
+}
+
+.mentors {
+    background-color: $dark-blue;
+
+    &__title {
+        @include article-title(20px);
+    }
+}
+

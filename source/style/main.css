@@ -368,6 +368,35 @@ html {
   margin: 0 auto;
 }
 
+.play-btn {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 25px;
+  margin: 9em 0;
+  border: 1px solid #ECEAEA;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.play-btn::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 15px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #ECEAEA;
+  border-bottom: 10px solid transparent;
+}
+
 @font-face {
   font-family: Lato;
   src: url(../fonts/Lato-Hairline.ttf);
@@ -802,32 +831,37 @@ html {
   }
 }
 
-.header__play-btn {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: white;
-  padding: 25px;
-  margin: 9em 0;
-  border: 1px solid #ECEAEA;
-  border-radius: 50%;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-block;
-  cursor: pointer;
+.main__mentors-applicants-container {
+  margin-top: 66px;
 }
 
-.header__play-btn::after {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 15px;
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 20px solid #ECEAEA;
-  border-bottom: 10px solid transparent;
+@media (min-width: 992px) {
+  .main__mentors-applicants-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.mentors {
+  background-color: #181F2F;
+}
+
+.mentors__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #B2CCFF;
 }
 /*# sourceMappingURL=main.css.map */
