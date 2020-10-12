@@ -33,6 +33,14 @@
     font-size: $font;
 }
 
+// Article title
+
+@mixin article-title($size) {
+    font-size: $size;
+    font-weight: 600;
+    color: $light-blue;
+}
+
 // Background gradient
 
 @mixin background-gradient($direction) {
