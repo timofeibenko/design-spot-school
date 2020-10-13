@@ -20,7 +20,7 @@
 
 // Subscribe button 
 
-@mixin btn($padding, $margin, $font) {
+@mixin sign-in-btn($padding, $margin, $font) {
     background-color: $blue;
     border: none;
     color: white;

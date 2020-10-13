@@ -83,10 +83,10 @@
     }
 
     &__subscr-btn {
-        @include btn(15px 7.1em, 2em, calc(10px + 1.3vw));
+        @include sign-in-btn(15px 7.1em, 2em, calc(10px + 1.3vw));
 
         @include md {
-            @include btn(15px 7.1em, 60px, 20px);
+            @include sign-in-btn(15px 7.1em, 60px, 20px);
         }
 
         @include lg {
