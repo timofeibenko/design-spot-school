@@ -1,16 +1,201 @@
 .main__mentors-applicants-container {
-    margin-top: 66px ;
+    margin: 66px 0 0 0;
+
+    @include md {
+        margin: 120px 0 0 60px;
+    }
 
     @include lg {
-        @include flexible(center, center, row, nowrap);
+        @include flexible(space-between, flex-start, row, nowrap);
+        margin: 66px 0 0 0;
     }
 }
+
+// Mentors
 
 .mentors {
-    background-color: $dark-blue;
+    margin:0 1.5em 3em 1.5em;
+
+    @include md {
+        margin-right: 80px;
+    }
+
+    @include lg {
+        width: 50%;
+        margin: 3em 0 0 30px;
+    }
 
     &__title {
-        @include article-title(20px);
+        margin-bottom: 40px;
+        @include article-title(calc(10px + 5vw));
+        text-align: center;
+
+        @include md {
+            font-size: 48px;
+        }
+
+        @include lg {
+            font-size: 52px;
+            text-align: left;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 16px;
+        font-size: calc(10px + 1.3vw);
+        font-weight: 300;
+        color: $light-grey;
+
+        @include md {
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle span {
+        font-weight: 500;
+    }
+
+    &__n-of-commentaries {
+        display: block;
+        font-size: calc(10px + 0.8vw);
+        color: $aquamarine;
+        text-align: right;
+
+        @include md {
+            font-size: 16px;
+        }
+    }
+
+    &__commentaries-container {
+        @include flexible(space-between, flex-start, column, nowrap);
+
+        margin: 8px 0 0 0;
+        padding: 1em;
+        background-color: $gradient-light-blue;
+
+        @include sm {
+            flex-direction: row;
+        }
+
+        @include md {
+            padding-bottom: 2em;
+        }
+    }
+
+    &__photo {
+        width: 50%;
+
+        @include sm {
+            width: 26%;
+        }
+
+        @include md { 
+            width: 177px;
+        }
+    }
+
+    &__text-container {
+        @include sm {
+            margin-left: 13px;
+        }
+    }
+
+    &__name {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: calc(10px + 1.6vw);
+        font-weight: 500;
+        color: $light-grey;
+
+        @include sm {
+            margin-top: 0;
+        }
+
+        @include md {
+            font-size: 24px;
+        }
+    }
+
+    &__competence {
+        margin-bottom: 12px;
+        @extend .mentors__n-of-commentaries;
+        text-align: left;
+    }
+
+    &__commentary {
+        @extend .mentors__competence;
+        font-weight: 300;
+        color: $white;
     }
 }
 
+// Applicants
+
+.applicants {
+    margin-left: 1.5em;
+    padding-top: 2em;
+    background: url(../img/main/polka-dot.svg) no-repeat;
+    background-position: top 10px right;
+    background-size: calc(15px + 15vw);
+
+    @include md {
+        background-size: 130px;
+    }
+
+    @include lg {
+        background-position: top right;
+        background-size: 120px;
+    }
+
+    &__title {
+        @extend .mentors__title;
+
+        @include md {
+            padding-right: 1em;
+        }
+
+        @include lg {
+            margin-bottom: 101px;
+            padding-top: .5em;
+        }
+    }
+
+    &__benefits {
+        margin-left: 0.5em;
+    }
+
+    &__benefits-title,
+    &__benefits-descr {
+        @extend .mentors__commentary;
+    }
+
+    &__benefits-title {
+        position: relative;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: $light-grey;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -8px;
+            display: block;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            background-color: $aquamarine;
+        }
+    }
+
+    &__benefits-descr {
+        max-width: 390px;
+        margin: 0 1.5em 24px 0;
+        font-weight: 400;
+        color: $dark-grey;
+
+        &:nth-child(n + 5) {
+            margin-bottom: 0;
+        }
+    }
+}
