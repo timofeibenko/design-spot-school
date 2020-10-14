@@ -881,7 +881,7 @@ html {
 @media (min-width: 992px) {
   .mentors {
     width: 50%;
-    margin: 3em 0 0 30px;
+    margin: 3.5em 0 0 30px;
   }
 }
 
@@ -969,6 +969,13 @@ html {
 @media (min-width: 768px) {
   .mentors__commentaries-container {
     padding-bottom: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .mentors__commentaries-container {
+    background: -webkit-gradient(linear, left top, right top, from(#1C2539), to(#293957));
+    background: linear-gradient(to right, #1C2539, #293957);
   }
 }
 
