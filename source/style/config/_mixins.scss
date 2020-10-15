@@ -45,7 +45,7 @@
 
 @mixin background-gradient($direction) {
     background: linear-gradient($direction, $gradient-dark-blue,
-    $gradient-light-blue)
+    $gradient-light-blue);
   }
 
 //Adaptiveness
