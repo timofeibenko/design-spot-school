@@ -138,7 +138,7 @@
 .applicants {
     margin-left: 1.5em;
     padding-top: 2em;
-    background: url(../img/main/polka-dot.svg) no-repeat;
+    background: url(../img/main/aquamarine-polka-dot.svg) no-repeat;
     background-position: top 10px right;
     background-size: calc(15px + 15vw);
 
@@ -164,16 +164,16 @@
         }
     }
 
-    &__benefits {
+    &__requirements {
         margin-left: 0.5em;
     }
 
-    &__benefits-title,
-    &__benefits-descr {
+    &__requirements-title,
+    &__requirements-descr {
         @extend .mentors__commentary;
     }
 
-    &__benefits-title {
+    &__requirements-title {
         position: relative;
         margin-bottom: 8px;
         font-weight: 700;
@@ -192,7 +192,7 @@
         }
     }
 
-    &__benefits-descr {
+    &__requirements-descr {
         max-width: 390px;
         margin: 0 1.5em 24px 0;
         font-weight: 400;
@@ -200,6 +200,84 @@
 
         &:nth-child(n + 5) {
             margin-bottom: 0;
+        }
+    }
+}
+
+// Requirements
+
+.requirements {
+
+    &__title {
+        margin-top: 3em;
+        @extend .mentors__title;
+        text-align: center;
+    }
+
+    /* Grid is used here to make all cards be of an equal height 
+    without explicitly stating the height */ 
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
+        margin: 0 1.5em;
+        // @include flexible(flex-start, flex-start, row, nowrap);
+        overflow: auto;
+
+    }
+
+    &__card {
+        grid-column: 1;
+        min-width: 290px;
+        height: 100%;
+        padding: 1em;
+        @include background-gradient (to left);
+    }
+
+    &__card:nth-of-type(2) {
+        grid-column: 2;
+        
+        & .requirements__card-item {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__card:nth-of-type(3) {
+        grid-column: 3;
+        
+        & .requirements__card-item {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__card-title {
+        margin-bottom: 20px;
+        @extend .mentors__name;
+    }
+
+    &__card-copy {
+        @extend .mentors__commentary;
+        font-weight: 500;
+    }
+
+    /* I'm using a modifier here as it is more specific
+    and with it I can target only the first <ul> that is 
+    inside of this particular card in no dependance on 
+    its position in relation to other cards */
+    &__card--with-copy { 
+
+        & .requirements__card-list:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__card-item {
+        @extend .applicants__requirements-title;
+        font-weight: 300;
+        margin: 0 0.7em 0.4em 0;
+
+        &::before {
+            background-color: #64B5F6;
         }
     }
 }

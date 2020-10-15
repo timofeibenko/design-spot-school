@@ -659,7 +659,7 @@ html {
 .header__title {
   padding-top: 5px;
   padding-left: 0.4em;
-  background: url(../img/header/stripes.svg) no-repeat;
+  background: url(../img/aquamarine-stripes.svg) no-repeat;
   background-size: 9%;
   font-size: 11vw;
   font-weight: 400;
@@ -885,7 +885,7 @@ html {
   }
 }
 
-.mentors__title, .applicants__title {
+.mentors__title, .applicants__title, .requirements__title {
   margin-bottom: 40px;
   font-size: calc(10px + 5vw);
   font-weight: 600;
@@ -894,13 +894,13 @@ html {
 }
 
 @media (min-width: 768px) {
-  .mentors__title, .applicants__title {
+  .mentors__title, .applicants__title, .requirements__title {
     font-size: 48px;
   }
 }
 
 @media (min-width: 992px) {
-  .mentors__title, .applicants__title {
+  .mentors__title, .applicants__title, .requirements__title {
     font-size: 52px;
     text-align: left;
   }
@@ -923,7 +923,7 @@ html {
   font-weight: 500;
 }
 
-.mentors__n-of-commentaries, .mentors__competence, .mentors__commentary, .applicants__benefits-title, .applicants__benefits-descr {
+.mentors__n-of-commentaries, .mentors__competence, .mentors__commentary, .applicants__requirements-title, .requirements__card-item, .applicants__requirements-descr, .requirements__card-copy {
   display: block;
   font-size: calc(10px + 0.8vw);
   color: #61FFD9;
@@ -931,7 +931,7 @@ html {
 }
 
 @media (min-width: 768px) {
-  .mentors__n-of-commentaries, .mentors__competence, .mentors__commentary, .applicants__benefits-title, .applicants__benefits-descr {
+  .mentors__n-of-commentaries, .mentors__competence, .mentors__commentary, .applicants__requirements-title, .requirements__card-item, .applicants__requirements-descr, .requirements__card-copy {
     font-size: 16px;
   }
 }
@@ -1001,7 +1001,7 @@ html {
   }
 }
 
-.mentors__name {
+.mentors__name, .requirements__card-title {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: calc(10px + 1.6vw);
@@ -1010,23 +1010,23 @@ html {
 }
 
 @media (min-width: 576px) {
-  .mentors__name {
+  .mentors__name, .requirements__card-title {
     margin-top: 0;
   }
 }
 
 @media (min-width: 768px) {
-  .mentors__name {
+  .mentors__name, .requirements__card-title {
     font-size: 24px;
   }
 }
 
-.mentors__competence, .mentors__commentary, .applicants__benefits-title, .applicants__benefits-descr {
+.mentors__competence, .mentors__commentary, .applicants__requirements-title, .requirements__card-item, .applicants__requirements-descr, .requirements__card-copy {
   margin-bottom: 12px;
   text-align: left;
 }
 
-.mentors__commentary, .applicants__benefits-title, .applicants__benefits-descr {
+.mentors__commentary, .applicants__requirements-title, .requirements__card-item, .applicants__requirements-descr, .requirements__card-copy {
   font-weight: 300;
   color: #FFFFFF;
 }
@@ -1034,7 +1034,7 @@ html {
 .applicants {
   margin-left: 1.5em;
   padding-top: 2em;
-  background: url(../img/main/polka-dot.svg) no-repeat;
+  background: url(../img/main/aquamarine-polka-dot.svg) no-repeat;
   background-position: top 10px right;
   background-size: calc(15px + 15vw);
 }
@@ -1065,18 +1065,18 @@ html {
   }
 }
 
-.applicants__benefits {
+.applicants__requirements {
   margin-left: 0.5em;
 }
 
-.applicants__benefits-title {
+.applicants__requirements-title, .requirements__card-item {
   position: relative;
   margin-bottom: 8px;
   font-weight: 700;
   color: #DCDDE0;
 }
 
-.applicants__benefits-title::before {
+.applicants__requirements-title::before, .requirements__card-item::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -1088,14 +1088,87 @@ html {
   background-color: #61FFD9;
 }
 
-.applicants__benefits-descr {
+.applicants__requirements-descr {
   max-width: 390px;
   margin: 0 1.5em 24px 0;
   font-weight: 400;
   color: #BABCC1;
 }
 
-.applicants__benefits-descr:nth-child(n + 5) {
+.applicants__requirements-descr:nth-child(n + 5) {
   margin-bottom: 0;
+}
+
+.requirements {
+  /* Grid is used here to make all cards be of an equal height 
+    without explicitly stating the height */
+  /* I'm using a modifier here as it is more specific
+    and with it I can target only the first <ul> that is 
+    inside of this particular card in no dependance on 
+    its position in relation to other cards */
+}
+
+.requirements__title {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.requirements__cards-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+  margin: 0 1.5em;
+  overflow: auto;
+}
+
+.requirements__card {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  min-width: 290px;
+  height: 100%;
+  padding: 1em;
+  background: -webkit-gradient(linear, right top, left top, from(#1C2539), to(#293957));
+  background: linear-gradient(to left, #1C2539, #293957);
+}
+
+.requirements__card:nth-of-type(2) {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.requirements__card:nth-of-type(2) .requirements__card-item {
+  margin-bottom: 1em;
+}
+
+.requirements__card:nth-of-type(3) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+.requirements__card:nth-of-type(3) .requirements__card-item {
+  margin-bottom: 1em;
+}
+
+.requirements__card-title {
+  margin-bottom: 20px;
+}
+
+.requirements__card-copy {
+  font-weight: 500;
+}
+
+.requirements__card--with-copy .requirements__card-list:first-of-type {
+  margin-bottom: 20px;
+}
+
+.requirements__card-item {
+  font-weight: 300;
+  margin: 0 0.7em 0.4em 0;
+}
+
+.requirements__card-item::before {
+  background-color: #64B5F6;
 }
 /*# sourceMappingURL=main.css.map */
