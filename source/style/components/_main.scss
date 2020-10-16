@@ -290,7 +290,7 @@
 
     &__card-item {
         @extend .applicants__requirements-title;
-        margin: 0 0.7em 0.4em 0;
+        margin: 0 0.7em 0.4em 0.5em;
         font-weight: 300;
 
         &::before {
