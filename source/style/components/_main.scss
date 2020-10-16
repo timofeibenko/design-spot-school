@@ -207,31 +207,44 @@
 // Requirements
 
 .requirements {
+    background: url(../img/main/blue-stripes.svg) no-repeat;
+    background-size: 10%;
+    background-position: top 2em left;
+
+    @include md {
+        background-size: 80px;
+    }
 
     &__title {
-        margin-top: 3em;
+        margin: 3em 0 1em 0;
         @extend .mentors__title;
         text-align: center;
     }
 
     /* Grid is used here to make all cards be of an equal height 
-    without explicitly stating the height */ 
+    without explicitly stating the height, either way they would
+    take the height of its content */ 
     &__cards-container {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 10px;
         margin: 0 1.5em;
-        // @include flexible(flex-start, flex-start, row, nowrap);
         overflow: auto;
 
+        @include md {
+            margin: 0 30px;
+        }
     }
 
     &__card {
         grid-column: 1;
-        min-width: 290px;
-        height: 100%;
+        min-width: 42vw;
         padding: 1em;
         @include background-gradient (to left);
+
+        @include lg {
+            min-width: 426px;
+        }
     }
 
     &__card:nth-of-type(2) {
@@ -273,8 +286,8 @@
 
     &__card-item {
         @extend .applicants__requirements-title;
-        font-weight: 300;
         margin: 0 0.7em 0.4em 0;
+        font-weight: 300;
 
         &::before {
             background-color: #64B5F6;
