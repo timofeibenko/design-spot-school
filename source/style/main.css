@@ -765,6 +765,7 @@ html {
 .header__subscr-btn {
   background-color: #004DE1;
   border: none;
+  border-radius: 5px;
   color: white;
   padding: 15px 7.1em;
   margin-left: 2em;
@@ -780,6 +781,7 @@ html {
   .header__subscr-btn {
     background-color: #004DE1;
     border: none;
+    border-radius: 5px;
     color: white;
     padding: 15px 7.1em;
     margin-left: 60px;
@@ -1144,10 +1146,16 @@ html {
 .requirements__card {
   -ms-grid-column: 1;
   grid-column: 1;
-  min-width: 42vw;
+  min-width: 60vw;
   padding: 1em;
   background: -webkit-gradient(linear, right top, left top, from(#1C2539), to(#293957));
   background: linear-gradient(to left, #1C2539, #293957);
+}
+
+@media (min-width: 576px) {
+  .requirements__card {
+    min-width: 42vw;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1193,5 +1201,83 @@ html {
 
 .requirements__card-item::before {
   background-color: #64B5F6;
+}
+
+.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 4em 0 0 0;
+}
+
+.chat__copy {
+  width: 19em;
+  margin: 0 auto 2em auto;
+  font-size: calc(10px + 1.4vw);
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .chat__copy {
+    font-size: 20px;
+  }
+}
+
+.chat__btn {
+  background-color: transparent;
+  border: 1px solid #61FFD9;
+  border-radius: 5px;
+  color: #61FFD9;
+  padding: 15px 2.1em 15px 3.1em;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-block;
+  font-size: calc(10px + 1.3vw);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .chat__btn {
+    background-color: transparent;
+    border: 1px solid #61FFD9;
+    border-radius: 5px;
+    color: #61FFD9;
+    padding: 15px 2.1em 15px 3.1em;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
+.chat__btn--telegram {
+  background: url(../img/main/telegram-icon.svg) no-repeat;
+  background-size: 10%;
+  background-position: left 1.5em center;
+}
+
+@media (min-width: 768px) {
+  .chat__btn--telegram {
+    background-size: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

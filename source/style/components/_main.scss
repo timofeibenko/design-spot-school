@@ -238,9 +238,13 @@
 
     &__card {
         grid-column: 1;
-        min-width: 42vw;
+        min-width: 60vw;
         padding: 1em;
         @include background-gradient (to left);
+
+        @include sm {
+            min-width: 42vw;
+        }
 
         @include lg {
             min-width: 426px;
@@ -291,6 +295,44 @@
 
         &::before {
             background-color: #64B5F6;
+        }
+    }
+}
+
+// Chat
+
+.chat {
+    @include flexible (flex-start, center, column, nowrap);
+    margin: 4em 0 0 0;
+
+    &__copy {
+        width: 19em;
+        margin: 0 auto 2em auto;
+        font-size: calc(10px + 1.4vw);
+        font-weight: 400;
+        color: $white;
+        text-align: center;
+
+        @include md {
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        @include transparent-btn(15px 2.1em 15px 3.1em, 0, calc(10px + 1.3vw));
+
+        @include md {
+            @include transparent-btn(15px 2.1em 15px 3.1em, 0, 20px);
+        }
+    }
+
+    &__btn--telegram {
+        background: url(../img/main/telegram-icon.svg) no-repeat;
+        background-size: 10%;
+        background-position: left 1.5em center;
+
+        @include md {
+            background-size: 24px;
         }
     }
 }
