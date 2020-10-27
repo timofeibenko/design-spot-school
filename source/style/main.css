@@ -768,7 +768,7 @@ html {
   border-radius: 5px;
   color: white;
   padding: 15px 7.1em;
-  margin-left: 2em;
+  margin: 0 0 0 2em;
   text-align: center;
   text-decoration: none;
   font-weight: 700;
@@ -784,7 +784,7 @@ html {
     border-radius: 5px;
     color: white;
     padding: 15px 7.1em;
-    margin-left: 60px;
+    margin: 0 0 0 60px;
     text-align: center;
     text-decoration: none;
     font-weight: 700;
@@ -889,7 +889,7 @@ html {
   }
 }
 
-.mentors__title, .applicants__title, .requirements__title {
+.mentors__title, .applicants__title, .requirements__title, .its-free__title {
   margin-bottom: 40px;
   font-size: calc(10px + 5vw);
   font-weight: 600;
@@ -898,13 +898,13 @@ html {
 }
 
 @media (min-width: 768px) {
-  .mentors__title, .applicants__title, .requirements__title {
+  .mentors__title, .applicants__title, .requirements__title, .its-free__title {
     font-size: 48px;
   }
 }
 
 @media (min-width: 992px) {
-  .mentors__title, .applicants__title, .requirements__title {
+  .mentors__title, .applicants__title, .requirements__title, .its-free__title {
     font-size: 52px;
     text-align: left;
   }
@@ -940,7 +940,7 @@ html {
   }
 }
 
-.mentors__commentaries-container {
+.mentors__commentary-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,7 +962,7 @@ html {
 }
 
 @media (min-width: 576px) {
-  .mentors__commentaries-container {
+  .mentors__commentary-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -971,13 +971,13 @@ html {
 }
 
 @media (min-width: 768px) {
-  .mentors__commentaries-container {
+  .mentors__commentary-container {
     padding-bottom: 2em;
   }
 }
 
 @media (min-width: 992px) {
-  .mentors__commentaries-container {
+  .mentors__commentary-container {
     background: -webkit-gradient(linear, left top, right top, from(#1C2539), to(#293957));
     background: linear-gradient(to right, #1C2539, #293957);
   }
@@ -1133,11 +1133,17 @@ html {
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
-  margin: 0 1.5em;
+  margin-left: 1.5em;
   overflow: auto;
 }
 
 @media (min-width: 768px) {
+  .requirements__cards-container {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1378px) {
   .requirements__cards-container {
     margin: 0 30px;
   }
@@ -1219,7 +1225,13 @@ html {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: 4em 0 0 0;
+  margin: 90px 0.5em 80px 0.5em;
+}
+
+@media (min-width: 768px) {
+  .chat {
+    margin-bottom: 120px;
+  }
 }
 
 .chat__copy {
@@ -1279,5 +1291,79 @@ html {
   .chat__btn--telegram {
     background-size: 24px;
   }
+}
+
+.its-free {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "dots title title empty" auto "dots yes yes empty" auto "dots subtitle subtitle empty" auto "curr curr sub sub" auto "video video video video" auto;
+  -ms-grid-columns: 1fr 2fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.its-free__title {
+  grid-area: title;
+}
+
+.its-free__dots {
+  grid-area: dots;
+  background: url(../img/main/blue-polka-dot.svg) no-repeat;
+  height: 50px;
+  background-size: 10%;
+  background-position: top left;
+}
+
+.its-free__empty {
+  grid-area: empty;
+}
+
+.its-free__yes {
+  grid-area: yes;
+  font-size: calc(10px + 3vw);
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.its-free__subtitle {
+  grid-area: subtitle;
+  font-size: calc(10px + 1.9vw);
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.its-free__curriculum-btn {
+  grid-area: curr;
+  background-color: transparent;
+  border: 1px solid #61FFD9;
+  border-radius: 5px;
+  color: #61FFD9;
+  padding: 15px 1em 15px 1em;
+  margin: 0 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-block;
+  font-size: calc(10px + 1.3vw);
+  cursor: pointer;
+}
+
+.its-free__subscr-btn {
+  grid-area: subscr;
+  background-color: #004DE1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 1em 15px 1em;
+  margin: 0 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  font-size: calc(10px + 1.3vw);
+  cursor: pointer;
+}
+
+.its-free__video {
+  grid-area: video;
 }
 /*# sourceMappingURL=main.css.map */

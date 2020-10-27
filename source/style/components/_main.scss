@@ -66,7 +66,7 @@
         }
     }
 
-    &__commentaries-container {
+    &__commentary-container {
         @include flexible(space-between, flex-start, column, nowrap);
 
         margin: 8px 0 0 0;
@@ -228,10 +228,14 @@
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 10px;
-        margin: 0 1.5em;
+        margin-left: 1.5em;
         overflow: auto;
 
         @include md {
+            margin-left: 30px;
+        }
+
+        @include rwd(1378) {
             margin: 0 30px;
         }
     }
@@ -303,7 +307,11 @@
 
 .chat {
     @include flexible (flex-start, center, column, nowrap);
-    margin: 4em 0 0 0;
+    margin: 90px 0.5em 80px 0.5em;
+
+    @include md {
+        margin-bottom: 120px;
+    }
 
     &__copy {
         width: 19em;
@@ -335,4 +343,64 @@
             background-size: 24px;
         }
     }
+}
+
+// It's free 
+
+.its-free {
+    display: grid;
+    grid-template: "dots title title empty" auto
+                   "dots yes yes empty" auto
+                   "dots subtitle subtitle empty" auto
+                   "curr curr sub sub" auto
+                   "video video video video" auto;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+
+    &__title {
+        @extend .mentors__title;
+        grid-area: title; 
+    }
+
+    &__dots {
+        grid-area: dots;
+
+        background: url(../img/main/blue-polka-dot.svg) no-repeat;
+        height: 50px;
+        background-size: 10%;
+        background-position: top left;
+    }
+
+    &__empty {
+        grid-area: empty;
+    }
+
+    &__yes {
+        grid-area: yes;
+        font-size: calc(10px + 3vw);
+        font-weight: 400;
+        color: $white;
+    }
+
+    &__subtitle {
+        grid-area: subtitle;
+        font-size: calc(10px + 1.9vw);
+        font-weight: 400;
+        color: $white;
+    }
+
+    &__curriculum-btn {
+        grid-area: curr;
+        @include transparent-btn(15px 1em 15px 1em, 0 50px, calc(10px + 1.3vw))
+    }
+
+    &__subscr-btn {
+        grid-area: subscr;
+        @include sign-in-btn(15px 1em 15px 1em, 0 50px, calc(10px + 1.3vw))
+    }
+
+    &__video {
+        grid-area: video;
+    }
+
+
 }
