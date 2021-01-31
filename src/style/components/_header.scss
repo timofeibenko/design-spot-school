@@ -7,12 +7,12 @@
         padding-top: 5px;
         padding-left: 0.4em;
 
-        background: url(../img/aquamarine-stripes.svg) no-repeat;
+        background: url(./src/img/aquamarine-stripes.svg) no-repeat;
         background-size: 9%;
 
         font-size: 11vw;
         font-weight: 400;
-        color: $white;
+        color: black;
 
         @include md {
             background-size: 75px;
@@ -83,7 +83,7 @@
     }
 
     &__subscr-btn {
-        @include sign-in-btn(15px 7.1em, 0 0 0 2em, calc(10px + 1.3vw));
+        @include sign-in-btn(17px 7.1em, 0 0 0 2em, calc(10px + 1.3vw));
 
         @include md {
             @include sign-in-btn(15px 7.1em, 0 0 0 60px, 20px);

@@ -375,12 +375,28 @@
         align-items: center;              
     }
 
+    @include lg {
+        grid-template: "title title title"
+                       "dots yes video"
+                       "subtitle subtitle video"
+                       "sub sub video"
+                       "curr curr video";
+        grid-template-columns: .8fr 1fr 2.6fr;
+        grid-template-rows: 112px 5em 6em 5em;
+    }
+
     &__title {
         @extend .mentors__title;
 
         grid-area: title;
         margin-bottom: 0;
-        align-self: start; 
+        align-self: start;
+        
+        @include lg {
+            justify-self: start;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__dots {
@@ -394,6 +410,14 @@
         @include sm {
             background-size: 90%;
         }
+
+        @include md {
+            background-size: 109px;
+        }
+
+        @include lg {
+            background-size: 50%;
+        }
     }
 
     &__yes {
@@ -404,7 +428,12 @@
         color: $white;
 
         @include md {
-            font-size: 24px;
+            font-size: 32px;
+        }
+
+        @include lg {
+            align-self: end;
+            justify-self: start;
         }
     }
 
@@ -416,6 +445,16 @@
         font-weight: 400;
         color: $white;
         text-align: center;
+
+        @include md {
+            font-size: 24px;
+        }
+
+        @include lg {
+            align-self: center;
+            max-width: 400px;
+            margin: 0 1em;
+        }
     }
 
     &__curriculum-btn {
@@ -426,13 +465,18 @@
         @include sm {
             align-self: start;
             justify-self: stretch;
-            margin: 0 0.3em 0 3em;
+            margin: 0 .3em 0 3em;
         }
 
         @include md {
             justify-self: end;
             padding: 15px 72px;
             font-size: 20px;
+        }
+
+        @include lg {
+            justify-self: center;
+            margin: .7em 0 0 0;
         }
     }
 
@@ -444,7 +488,7 @@
 
         @include sm {
             justify-self: stretch;
-            margin: 0 3em 0 0.3em;
+            margin: 0 3em 0 .3em;
         }
 
         @include md {
@@ -452,15 +496,35 @@
             padding: 17px 102px;
             font-size: 20px;
         }
+
+        @include lg {
+            align-self: end;
+            justify-self: center;
+            margin: 0 auto;
+        }
     }
 
     &__video {
         grid-area: video;
+        justify-self: stretch;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-self: stretch;
+
         background: url(../img/main/thumbnail.png) 65% no-repeat;
         background-size: cover;
+        background-position: top;
+
+        @include md {
+            height: 517px;
+        }
+
+        @include lg {
+            justify-self: end;
+            height: 474px;
+            max-width: 682px;
+            min-width: 100%;
+        }
     }    
 }
