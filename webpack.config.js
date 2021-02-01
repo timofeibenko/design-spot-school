@@ -1,75 +1,68 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
+    context: path.resolve(__dirname, './src'),
     entry: {
-        index: './src/js/index.js'
+        main: './js/main.js',
     },
     output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].[contenthash].js'
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-    },
-    plugins: [
-        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: "index.html"
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'style.css',
-        }),
+    plugins: [new HtmlWebpackPlugin({
+        template: './index.html',
+        favicon: "./img/aquamarine-stripes.svg",
+        inject: 'body',
+    }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin(),
     ],
-    resolve: {
-        alias: {
-            styles: path.join(__dirname, 'src', 'style')
-        }
-    },
     module: {
         rules: [
             {
-                test: /\.html$/i,
-                loader: 'html-loader',
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '.',
+                        },
+                    },
+                    'css-loader',
+                ],
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            },
-            {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
+
             {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings
                     "style-loader",
-                    MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     "css-loader",
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],
             },
+            { test: /\.svg/,
+                use: { loader: "svg-url-loader",
+                    options: {
+                        // make loader to behave like url-loader, for all svg files
+                        encoding: "base64",
+                    }, }, },
 
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
-            {
-                test: /\.(csv|tsv)$/i,
-                use: ['csv-loader'],
-            },
-            {
-                test: /\.xml$/i,
-                use: ['xml-loader'],
-            },
+            { test: /\.(png|jpe?g|gif)$/i,
+                use: [ { loader: 'file-loader' },],},
+
+            { test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [ { loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }, },],},
         ],
     },
-}
+};

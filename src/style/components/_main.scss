@@ -283,11 +283,7 @@
         font-weight: 500;
     }
 
-    /* I'm using a modifier here as it is more specific
-    and with it I can target only the first <ul> that is 
-    inside of this particular card in no dependance on 
-    its position in relation to other cards */
-    &__card--with-copy { 
+    &__card--with-copy {
 
         & .requirements__card-list:first-of-type {
             margin-bottom: 20px;

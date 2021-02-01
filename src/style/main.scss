@@ -1,8 +1,8 @@
-@import '//config/normalize';
-@import '//config/variables';
-@import '//config/mixins';
-@import '//config/baseLayout';
+@import './src/style/config/normalize';
+@import './src/style/config/variables';
+@import './src/style/config/mixins';
+@import './src/style/config/baseLayout';
 
-@import '//components/nav';
-@import '//components/header';
-@import '//components/main';
+@import './src/style/components/nav';
+@import './src/style/components/header';
+@import './src/style/components/main';
