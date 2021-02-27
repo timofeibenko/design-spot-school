@@ -1,0 +1,120 @@
+.mentors {
+  margin: 0 1.5em 3em 1.5em;
+
+  @include md {
+    margin-right: 80px;
+  }
+
+  @include lg {
+    width: 50%;
+    margin: 3.5em 0 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include article-title(calc(10px + 5vw));
+    text-align: center;
+
+    @include md {
+      font-size: 48px;
+    }
+
+    @include lg {
+      font-size: 52px;
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-size: calc(10px + 1.3vw);
+    font-weight: 300;
+    color: $light-grey;
+
+    @include md {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle span {
+    font-weight: 500;
+  }
+
+  &__n-of-commentaries {
+    display: block;
+    font-size: calc(10px + 0.8vw);
+    color: $aquamarine;
+    text-align: right;
+
+    @include md {
+      font-size: 16px;
+    }
+  }
+
+  &__commentary-container {
+    @include flexible(space-between, flex-start, column, nowrap);
+
+    margin: 8px 0 0 0;
+    padding: 1em;
+    background-color: $gradient-light-blue;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    @include md {
+      padding-bottom: 2em;
+    }
+
+    @include lg {
+      @include background-gradient(to right);
+    }
+  }
+
+  &__photo {
+    flex-shrink: 0; // Firefox sets it to 1 unless explicitly expressed that is must be 0
+    width: 50%;
+
+    @include sm {
+      width: 26%;
+    }
+
+    @include md {
+      width: 177px;
+    }
+  }
+
+  &__text-container {
+    @include sm {
+      margin-left: 13px;
+    }
+  }
+
+  &__name {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: calc(10px + 1.6vw);
+    font-weight: 500;
+    color: $light-grey;
+
+    @include sm {
+      margin-top: 0;
+    }
+
+    @include md {
+      font-size: 24px;
+    }
+  }
+
+  &__competence {
+    margin-bottom: 12px;
+    @extend .mentors__n-of-commentaries;
+    text-align: left;
+  }
+
+  &__commentary {
+    @extend .mentors__competence;
+    font-weight: 300;
+    color: $white;
+  }
+}

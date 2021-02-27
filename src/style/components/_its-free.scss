@@ -1,0 +1,179 @@
+.its-free {
+  display: grid;
+
+  grid-template:  "dots title title ."
+                    "dots yes yes ."
+                    "dots subtitle subtitle ."
+                    "curr curr curr curr"
+                    "sub sub sub sub"
+                    "video video video video";
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 5.5em 3em 3em 5em 6em;
+  justify-items: center;
+  align-items: center;
+
+  @include sm {
+    grid-template:  "dots title title ."
+                        "dots yes yes ."
+                        "dots subtitle subtitle ."
+                        "curr curr sub sub"
+                        "video video video video";
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 6em 4em 6em 7em ;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @include lg {
+    grid-template: "title title title"
+                       "dots yes video"
+                       "subtitle subtitle video"
+                       "sub sub video"
+                       "curr curr video";
+    grid-template-columns: .8fr 1fr 2.6fr;
+    grid-template-rows: 112px 5em 6em 5em;
+  }
+
+  &__title {
+    @extend .mentors__title;
+
+    grid-area: title;
+    margin-bottom: 0;
+    align-self: start;
+
+    @include lg {
+      justify-self: start;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__dots {
+    grid-area: dots;
+    width: 100%;
+    height: 100%;
+    background: url(../img/main/blue-polka-dot.svg) no-repeat;
+    background-size: 100%;
+    background-position: left top 2em;
+
+    @include sm {
+      background-size: 90%;
+    }
+
+    @include md {
+      background-size: 109px;
+    }
+
+    @include lg {
+      background-size: 50%;
+    }
+  }
+
+  &__yes {
+    grid-area: yes;
+    align-self: start;
+    font-size: calc(10px + 3vw);
+    font-weight: 400;
+    color: $white;
+
+    @include md {
+      font-size: 32px;
+    }
+
+    @include lg {
+      align-self: end;
+      justify-self: start;
+    }
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    align-self: start;
+
+    font-size: calc(10px + 1.9vw);
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+
+    @include md {
+      font-size: 24px;
+    }
+
+    @include lg {
+      align-self: center;
+      max-width: 400px;
+      margin: 0 1em;
+    }
+  }
+
+  &__curriculum-btn {
+    grid-area: curr;
+
+    @include transparent-btn(15px 1em 15px 1em, 0, calc(10px + 1.3vw));
+
+    @include sm {
+      align-self: start;
+      justify-self: stretch;
+      margin: 0 .3em 0 3em;
+    }
+
+    @include md {
+      justify-self: end;
+      padding: 15px 72px;
+      font-size: 20px;
+    }
+
+    @include lg {
+      justify-self: center;
+      margin: .7em 0 0 0;
+    }
+  }
+
+  &__subscr-btn {
+    grid-area: sub;
+    align-self: start;
+
+    @include sign-in-btn(17px 2.5em 17px 2.5em, 0, calc(10px + 1.3vw));
+
+    @include sm {
+      justify-self: stretch;
+      margin: 0 3em 0 .3em;
+    }
+
+    @include md {
+      justify-self: start;
+      padding: 17px 102px;
+      font-size: 20px;
+    }
+
+    @include lg {
+      align-self: end;
+      justify-self: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__video {
+    grid-area: video;
+    justify-self: stretch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url(../img/main/thumbnail.png) 65% no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    @include md {
+      height: 517px;
+    }
+
+    @include lg {
+      justify-self: end;
+      height: 474px;
+      max-width: 682px;
+      min-width: 100%;
+    }
+  }
+}
