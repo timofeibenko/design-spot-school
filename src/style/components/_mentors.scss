@@ -81,6 +81,7 @@
       width: 27px;
       height: 17px;
       fill: $light-blue;
+      transition: fill .1s linear;
     }
 
     &-prev.inactive svg,

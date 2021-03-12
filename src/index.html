@@ -6,226 +6,219 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet">
     <script src='js/main.js' defer type="module"></script>
     <title>DesignSpotSchool</title>
-<!--    <link rel="icon" -->
-<!--      type="image/png" -->
-<!--      href="img/aquamarine-stripes.svg">-->
-</head>
-<body>
+    </head>
+    <body>
         <nav class="nav">
             <div class="wrap">
-            <div class="nav__wrap">
-                <div class="nav__logo">
-                    <span class="nav__logo-item"></span>
-                    <span class="nav__logo-item">d</span>
-                    <span class="nav__logo-item">e</span>
-                    <span class="nav__logo-item">s</span>
-                    <span class="nav__logo-item">i</span>
-                    <span class="nav__logo-item">g</span>
-                    <span class="nav__logo-item">n</span>
-                    <span class="nav__logo-item">s</span>
-                    <span class="nav__logo-item">p</span>
-                    <span class="nav__logo-item">o</span>
-                    <span class="nav__logo-item">t</span>
-                </div>
-                <div class="nav__burger"></div>
-                <div class="nav__list">
-                    <a href="#" class="nav__link">Главная</a>
-                    <a href="#" class="nav__link">О нас</a>
-                    <a href="#" class="nav__link">Курс</a>
-                    <a href="#" class="nav__link">Отзывы</a>
-                    <a href="#" class="nav__link">FAQ</a>
+                <div class="nav__wrap">
+                    <div class="nav__logo">
+                        <span class="nav__logo-item"></span>
+                        <span class="nav__logo-item">d</span>
+                        <span class="nav__logo-item">e</span>
+                        <span class="nav__logo-item">s</span>
+                        <span class="nav__logo-item">i</span>
+                        <span class="nav__logo-item">g</span>
+                        <span class="nav__logo-item">n</span>
+                        <span class="nav__logo-item">s</span>
+                        <span class="nav__logo-item">p</span>
+                        <span class="nav__logo-item">o</span>
+                        <span class="nav__logo-item">t</span>
+                    </div>
+                    <div class="nav__burger"></div>
+                    <div class="nav__list">
+                        <a href="#" class="nav__link">Главная</a>
+                        <a href="#" class="nav__link">О нас</a>
+                        <a href="#" class="nav__link">Курс</a>
+                        <a href="#" class="nav__link">Отзывы</a>
+                        <a href="#" class="nav__link">FAQ</a>
+                    </div>
                 </div>
             </div>
-                <div class="wrap">
-
         </nav> <!-- nav -->
-    <div class="wrap">
-        <header class="header">
-            <div class="header__text-container">
-                <h1 class="header__title">DesignSpotSchool</h1>
-                <div class="header__subtitles">
-                    <span class="header__stage">3 сезон, 1 этап</span>
-                    <span class="header__date">15 февраля &#8212; 15 мая 2020</span>
+        <div class="wrap">
+            <header class="header">
+                <div class="header__text-container">
+                    <h1 class="header__title">DesignSpotSchool</h1>
+                    <div class="header__subtitles">
+                        <span class="header__stage">3 сезон, 1 этап</span>
+                        <span class="header__date">15 февраля &#8212; 15 мая 2020</span>
+                    </div>
+                    <p class="header__descr">Бесплатная онлайн школа<br>для начинающего UX дизайнера</p>
+                    <button class="header__subscr-btn">Записаться</button>
                 </div>
-                <p class="header__descr">Бесплатная онлайн школа<br>для начинающего UX дизайнера</p>
-                <button class="header__subscr-btn">Записаться</button>
-            </div>
-            <div class="header__video">
-                <button class="play-btn"></button>
-            </div>
-        </header> <!-- header -->
-        <main class="main">
-            <div class="main__mentors-applicants-container">
-                <article class="mentors">
-                    <h3 class="mentors__title">От кого?</h3>
-                    <p class="mentors__subtitle">От менторов из <span>DesighSpot Community</span> и <span>Epam systems</span></p>
-                    <span class="mentors__n-of-commentaries"><span>6</span> комментариев</span>
-                    <div class="mentors__btn-pos-wrap">
-                        <div class="swiper-container">
-                            <div class="mentors__carousel swiper-wrapper">
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="a photo of Nikita Zenchenko">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">Nikita Zenchenko</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Почему мы сделали DesignSpot School? Наша цель проста — за долгие годы работы с крупнейшими мировыми компаниями мы накопили много уникальных знаний и навыков по UX-дизайну, разработали эффективный дизан-процесс и научили этому сотни дизайнеров в EPAM. Мы больше не можем держать это в себе и хотим безвозмездно поделиться профессиональными секретами со всеми, просто потому что нам это нравится и мы это можем!</p>
+                <div class="header__video">
+                    <button class="play-btn"></button>
+                </div>
+            </header> <!-- header -->
+            <main class="main">
+                <div class="main__mentors-applicants-container">
+                    <article class="mentors">
+                        <h3 class="mentors__title">От кого?</h3>
+                        <p class="mentors__subtitle">От менторов из <span>DesighSpot Community</span> и <span>Epam systems</span></p>
+                        <span class="mentors__n-of-commentaries"><span id="mentorsCommsQty"></span> комментариев</span>
+                        <div class="mentors__btn-pos-wrap">
+                            <div class="mentors__swiper-container swiper-container">
+                                <div class="mentors__carousel swiper-wrapper">
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="a photo of Nikita Zenchenko">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">Nikita Zenchenko</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Почему мы сделали DesignSpot School? Наша цель проста — за долгие годы работы с крупнейшими мировыми компаниями мы накопили много уникальных знаний и навыков по UX-дизайну, разработали эффективный дизан-процесс и научили этому сотни дизайнеров в EPAM. Мы больше не можем держать это в себе и хотим безвозмездно поделиться профессиональными секретами со всеми, просто потому что нам это нравится и мы это можем!</p>
+                                        </div>
+                                    </div>
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">John Doe</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
+                                        </div>
+                                    </div>
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">John Doe</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
+                                        </div>
+                                    </div>
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">John Doe</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
+                                        </div>
+                                    </div>
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">John Doe</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
+                                        </div>
+                                    </div>
+                                    <div class="mentors__commentary-container swiper-slide">
+                                        <img class="mentors__photo"
+                                             src="./nikita-zenchenko-photo.png"
+                                             alt="">
+                                        <div class="mentors__text-container">
+                                            <h4 class="mentors__name">John Doe</h4>
+                                            <span class="mentors__competence">Editor of DesignSpot</span>
+                                            <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">John Doe</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
-                                    </div>
+                            </div>
+                            <button class="mentors__carousel-prev inactive">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
+                                    <defs/>
+                                    <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
+                                </svg>
+                            </button>
+                            <button class="mentors__carousel-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
+                                    <defs/>
+                                    <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="applicants">
+                        <h3 class="applicants__title">Для кого?</h3>
+                        <div class="applicants__requirements">
+                            <h4 class="applicants__requirements-title">Начинающих дизайнеров</h4>
+                            <p class="applicants__requirements-descr">с некоторым опытом работы, которые хотят систематизировать и углубить свои знания, найти для себя новые навыки в тех активностях, которыми раньше не занимались.</p>
+                            <h4 class="applicants__requirements-title">Замотивированных ребят</h4>
+                            <p class="applicants__requirements-descr">которые еще непробовали себя в дизайне, но им следует знать, что будет не легко!</p>
+                            <h4 class="applicants__requirements-title">Кто готов работать</h4>
+                            <p class="applicants__requirements-descr">Сделать тестовое задание</p>
+                            <p class="applicants__requirements-descr">Прочесть наши материалы, рекомендованные для обучения</p>
+                            <p class="applicants__requirements-descr">Подтянуть навыки работы с редакторами перед началом обучения</p>
+                        </div>
+                    </article> <!-- applicants -->
+                </div>
+                <article class="requirements">
+                    <h3 class="requirements__title">Что получите от курса?</h3>
+                    <div class="requirements__cards-container">
+                        <div class="requirements__card requirements__card--with-copy">
+                            <h4 class="requirements__card-title">Вы сможете</h4>
+                            <p class="requirements__card-copy">Самостоятельно разрабатывать современные цифровые продукты:</p>
+                            <ul class="requirements__card-list">
+                                <li class="requirements__card-item">Веб-сайты</li>
+                                <li class="requirements__card-item">Мобильные приложения</li>
+                                <li class="requirements__card-item">Сервисы</li>
+                                <li class="requirements__card-item">Инструменты бизнеса</li>
+                            </ul>
+                            <p class="requirements__card-copy">Выпускник DesignSpot School сможет</p>
+                            <ul class="requirements__card-list">
+                                <li class="requirements__card-item">Создавать концепцию продукта</li>
+                                <li class="requirements__card-item">Проектировать логику взаимодействия</li>
+                                <li class="requirements__card-item">Проводить пользовательские исследования</li>
+                                <li class="requirements__card-item">Делать первоклассные интерфейсы</li>
+                            </ul>
+                        </div>
+                        <div class="requirements__card">
+                            <h4 class="requirements__card-title">Приобретаете</h4>
+                            <ul class="requirements__card-list">
+                                <li class="requirements__card-item">Онлайн лекции, вебинары, ответы на любые вопросы</li>
+                                <li class="requirements__card-item">Актуальные знания и навыки от практикующих профессионалов
+                                </li>
+                                <li class="requirements__card-item">Большое дизайн-сообщество и учебная группа, где вы сможете всё спросить и обсудить</li>
+                                <li class="requirements__card-item">Признаваемый в индустрии сертификат</li>
+                                <li class="requirements__card-item">Огромное количество практики и интересных задач</li>
+                                <li class="requirements__card-item">Сильное портфолио</li>
+                            </ul>
+                        </div>
+                        <div class="requirements__card">
+                            <h4 class="requirements__card-title">А также</h4>
+                            <ul class="requirements__card-list">
+                                <li class="requirements__card-item">Уметь отстаивать свои дизайн-решения и интересы пользователей перед заказчиками</li>
+                                <li class="requirements__card-item">3 месяца практики и обучения на первом этапе</li>
+                                <li class="requirements__card-item">Систематизация теории и разносторонню практику</li>
+                                <li class="requirements__card-item">Общение с менторами и другими участниками в telegram-чате школы.</li>
+                                <li class="requirements__card-item">На выходе — полностью готовый к реальным задачам боевой дизайнер </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article> <!-- requirements -->
+                <section class="chat">
+                    <p class="chat__copy">Чат, где будут обсуждаться все вопросы, и вы точно не пропустите начало</p>
+                    <button class="chat__btn chat__btn--telegram">Telegram-чат</button>
+                </section> <!-- chat -->
+                <section class="its-free">
+                    <h3 class="its-free__title">Правда бесплатно?</h3>
+                        <div class="its-free__main">
+                            <div class="its-free__copy-btn-container">
+                                <span class="its-free__yes">Да!</span>
+                                <span class="its-free__subtitle">нужно только старательно выполнять программу :)</span>
+                                <div class="its-free__btn-container">
+                                    <button class="its-free__curriculum-btn">Программа курса</button>
+                                    <button class="its-free__subscr-btn">Записаться</button>
                                 </div>
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">John Doe</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
-                                    </div>
-                                </div>
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">John Doe</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
-                                    </div>
-                                </div>
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">John Doe</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
-                                    </div>
-                                </div>
-                                <div class="mentors__commentary-container swiper-slide">
-                                    <img class="mentors__photo"
-                                         src="./nikita-zenchenko-photo.png"
-                                         alt="">
-                                    <div class="mentors__text-container">
-                                        <h4 class="mentors__name">John Doe</h4>
-                                        <span class="mentors__competence">Editor of DesignSpot</span>
-                                        <p class="mentors__commentary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, est excepturi fugit libero minima nemo nisi, numquam perspiciatis quasi quis repellendus reprehenderit rerum soluta, ullam voluptatibus. Commodi consequuntur corporis cum dolore eligendi enim eos est eum incidunt maiores, nostrum, quo reprehenderit sed sint sit unde voluptas. Accusantium aliquam assumenda at autem commodi distinctio doloribus ea expedita harum, id illo iste magnam magni maiores minus modi nesciunt nihil non nostrum odit possimus praesentium rerum tempore voluptate?</p>
-                                    </div>
-                                </div>
-    <!--                            <div class="swiper-button-prev"></div>-->
-    <!--                            <div class="swiper-button-next"></div>-->
+                            </div>
+                            <div class="its-free__video">
+                                <button class="its-free__play-btn play-btn"></button>
                             </div>
                         </div>
-                        <button class="mentors__carousel-prev inactive">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
-                                <defs/>
-                                <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
-                            </svg>
-                        </button>
-                        <button class="mentors__carousel-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
-                                <defs/>
-                                <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
-                            </svg>
-                        </button>
                     </div>
-                </article>
-                <article class="applicants">
-                    <h3 class="applicants__title">Для кого?</h3>
-                    <div class="applicants__requirements">
-                        <h4 class="applicants__requirements-title">Начинающих дизайнеров</h4>
-                        <p class="applicants__requirements-descr">с некоторым опытом работы, которые хотят систематизировать и углубить свои знания, найти для себя новые навыки в тех активностях, которыми раньше не занимались.</p>
-                        <h4 class="applicants__requirements-title">Замотивированных ребят</h4>
-                        <p class="applicants__requirements-descr">которые еще непробовали себя в дизайне, но им следует знать, что будет не легко!</p>
-                        <h4 class="applicants__requirements-title">Кто готов работать</h4>
-                        <p class="applicants__requirements-descr">Сделать тестовое задание</p>
-                        <p class="applicants__requirements-descr">Прочесть наши материалы, рекомендованные для обучения</p>
-                        <p class="applicants__requirements-descr">Подтянуть навыки работы с редакторами перед началом обучения</p>
-                    </div>
-                </article> <!-- applicants -->
-            </div>
-            <article class="requirements">
-                <h3 class="requirements__title">Что получите от курса?</h3>
-                <div class="requirements__cards-container">
-                    <div class="requirements__card requirements__card--with-copy">
-                        <h4 class="requirements__card-title">Вы сможете</h4>
-                        <p class="requirements__card-copy">Самостоятельно разрабатывать современные цифровые продукты:</p>
-                        <ul class="requirements__card-list">
-                            <li class="requirements__card-item">Веб-сайты</li>
-                            <li class="requirements__card-item">Мобильные приложения</li>
-                            <li class="requirements__card-item">Сервисы</li>
-                            <li class="requirements__card-item">Инструменты бизнеса</li>
-                        </ul>
-                        <p class="requirements__card-copy">Выпускник DesignSpot School сможет</p>
-                        <ul class="requirements__card-list">
-                            <li class="requirements__card-item">Создавать концепцию продукта</li>
-                            <li class="requirements__card-item">Проектировать логику взаимодействия</li>
-                            <li class="requirements__card-item">Проводить пользовательские исследования</li>
-                            <li class="requirements__card-item">Делать первоклассные интерфейсы</li>
-                        </ul>
-                    </div>
-                    <div class="requirements__card">
-                        <h4 class="requirements__card-title">Приобретаете</h4>
-                        <ul class="requirements__card-list">
-                            <li class="requirements__card-item">Онлайн лекции, вебинары, ответы на любые вопросы</li>
-                            <li class="requirements__card-item">Актуальные знания и навыки от практикующих профессионалов
-                            </li>
-                            <li class="requirements__card-item">Большое дизайн-сообщество и учебная группа, где вы сможете всё спросить и обсудить</li>
-                            <li class="requirements__card-item">Признаваемый в индустрии сертификат</li>
-                            <li class="requirements__card-item">Огромное количество практики и интересных задач</li>
-                            <li class="requirements__card-item">Сильное портфолио</li>
-                        </ul>
-                    </div>
-                    <div class="requirements__card">
-                        <h4 class="requirements__card-title">А также</h4>
-                        <ul class="requirements__card-list">
-                            <li class="requirements__card-item">Уметь отстаивать свои дизайн-решения и интересы пользователей перед заказчиками</li>
-                            <li class="requirements__card-item">3 месяца практики и обучения на первом этапе</li>
-                            <li class="requirements__card-item">Систематизация теории и разносторонню практику</li>
-                            <li class="requirements__card-item">Общение с менторами и другими участниками в telegram-чате школы.</li>
-                            <li class="requirements__card-item">На выходе — полностью готовый к реальным задачам боевой дизайнер </li>
-                        </ul>
-                    </div>
-                </div>
-            </article> <!-- requirements -->
-            <section class="chat">
-                <p class="chat__copy">Чат, где будут обсуждаться все вопросы, и вы точно не пропустите начало</p>
-                <button class="chat__btn chat__btn--telegram">Telegram-чат</button>
-            </section> <!-- chat -->
-            <section class="its-free">
-                <h3 class="its-free__title">Правда бесплатно?</h3>
-                    <div class="its-free__main">
-                        <div class="its-free__copy-btn-container">
-                            <span class="its-free__yes">Да!</span>
-                            <span class="its-free__subtitle">нужно только старательно выполнять программу :)</span>
-                            <div class="its-free__btn-container">
-                                <button class="its-free__curriculum-btn">Программа курса</button>
-                                <button class="its-free__subscr-btn">Записаться</button>
-                            </div>
-                        </div>
-                        <div class="its-free__video">
-                            <button class="its-free__play-btn play-btn"></button>
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- its-free -->
-            <section class="reviews">
-                <h3 class="reviews__title">Что говорят участники прошлого курса?</h3>
-                <span class="reviews__count">Всего <span>25</span> отзывов</span>
-            </section>
-        </main> <!-- main -->
-    </div> <!-- wrap -->
-    
-</body>
-</html>
+                </section> <!-- its-free -->
+                <section class="reviews">
+                    <h3 class="reviews__title">Что говорят участники прошлого курса?</h3>
+                    <span class="reviews__count">Всего <span>25</span> отзывов</span>
+                </section>
+            </main> <!-- main -->
+        </div> <!-- wrap -->
+    </body>
+    </html>
