@@ -104,7 +104,7 @@
 
   &__commentary-container {
     @include flexible(space-between, flex-start, column, nowrap);
-    height: 384px;
+    min-height: 384px;
     padding: 1em;
     background-color: $gradient-light-blue;
 
