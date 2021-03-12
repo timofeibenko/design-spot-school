@@ -118,6 +118,7 @@
 
     @include lg {
       @include background-gradient(to right);
+      padding-right: 37px;
     }
   }
 
@@ -131,6 +132,10 @@
 
     @include md {
       width: 177px;
+    }
+
+    @include lg {
+      width: 248px;
     }
   }
 
