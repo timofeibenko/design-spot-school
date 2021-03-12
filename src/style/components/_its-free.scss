@@ -13,7 +13,7 @@
   &__copy-btn-container {
     @include flexible(center, center, column, nowrap);
     position: relative;
-    margin: 0 24px;
+    padding: 0 24px;
 
     @include lg {
       width: 50%;
