@@ -1,5 +1,6 @@
 .its-free {
   @include flexible(center, center, column, nowrap);
+  margin-bottom: 112px;
 
   &__main {
     width: 100%;
@@ -11,10 +12,39 @@
 
   &__copy-btn-container {
     @include flexible(center, center, column, nowrap);
+    position: relative;
     margin: 0 24px;
 
     @include lg {
       width: 50%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      height: 100%;
+      background: url(../img/main/blue-polka-dot.svg) no-repeat;
+      background-size: contain;
+
+      top: -30px;
+      width: 50px;
+
+      @include sm {
+        top: -50px;
+        width: 4em;
+      }
+
+      @include md {
+        width: 5em;
+      }
+
+      @include lg {
+        top: -37px;
+        height: 109px;
+        width: 91px;
+      }
     }
   }
 
