@@ -34,7 +34,6 @@
         color: $white;
         
         &:nth-child(1) {
-            display: block;
             height: 48px;
             @include logo-elem-position(1px, 15px, 11);
         }
