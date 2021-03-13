@@ -1,0 +1,46 @@
+.reviews {
+  margin: 0 32px 32px;
+
+  &__title {
+    @extend .mentors__title;
+    margin: 1em;
+    text-align: center;
+  }
+
+  &__n-of-reviews {
+    @extend .mentors__n-of-commentaries;
+    margin-bottom: 8px;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__review-container {
+    align-self: stretch;
+    max-width: 428px;
+    padding: 24px 24px 40px 24px;
+    @include background-gradient(to top right);
+  }
+
+  &__name {
+    @extend .mentors__name;
+  }
+
+  &__date,
+  &__season {
+    @extend .mentors__commentary;
+    display: inline-block;
+    width: 50%;
+    margin: 8px 0 24px 0;
+    color: $light-blue;
+  }
+
+  &__season {
+    text-align: right;
+  }
+
+  &__copy {
+    @extend .mentors__commentary;
+  }
+}
