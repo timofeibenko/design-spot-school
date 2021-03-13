@@ -2,14 +2,16 @@ import Swiper from 'swiper/bundle';
 import '../../node_modules/swiper/swiper-bundle.min.css';
 
 import NikZen from  './../img/main/nikita-zenchenko-photo.png';
-import placeholder from './../img/main/mentors-placeholder.jpg'
+import placeholder from './../img/main/mentors-placeholder.jpg';
+
+import declinationOfNum from "./declinationOfNum";
 
 // Vars
 
-const mentorsPrevBtn = document.querySelector('.mentors__carousel-prev');
-const mentorsNextBtn = document.querySelector('.mentors__carousel-next');
+const mentorsPrevBtn = document.querySelector('.mentors__slider-prev');
+const mentorsNextBtn = document.querySelector('.mentors__slider-next');
 
-const mentorsSlides = document.querySelectorAll('.mentors__commentary-container');
+const mentorsSlidesQty = document.querySelectorAll('.mentors__commentary-container').length;
 const mentorsCommsQty = document.querySelector('#mentorsCommsQty');
 
 // Photos
@@ -23,9 +25,9 @@ photos.forEach((photo, index) => {
 
 // Commentary count
 
-mentorsCommsQty.innerHTML = mentorsSlides.length.toString();
+mentorsCommsQty.innerHTML = `${mentorsSlidesQty.toString()} ${declinationOfNum(mentorsSlidesQty, ['комментарий', 'комментария', 'комментариев'])}`;
 
-// Commentary slider (Swiper)
+// Commentary slider
 
 const mentorsSwiper = new Swiper('.mentors__swiper-container', {
     direction: 'horizontal',
@@ -42,7 +44,7 @@ mentorsSwiper.on("slideChange", function() {
         mentorsPrevBtn.classList.add('inactive')
     }
 
-    else if (this.realIndex + 1 === mentorsSlides.length) {
+    else if (this.realIndex + 1 === mentorsSlidesQty) {
         mentorsNextBtn.classList.add('inactive')
     }
 
