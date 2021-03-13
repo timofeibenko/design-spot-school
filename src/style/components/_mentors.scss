@@ -61,8 +61,7 @@
 
   &__commentary-container {
     @include flexible(space-between, flex-start, column, nowrap);
-    min-height: 384px;
-    padding: 1em;
+    padding: 31px 37px 2em 40px;
     background-color: $gradient-light-blue;
 
     @include sm {
@@ -70,21 +69,25 @@
     }
 
     @include md {
-      padding-bottom: 2em;
+      min-height: 384px;
     }
 
     @include lg {
       @include background-gradient(to right);
-      padding-right: 37px;
     }
   }
 
   &__photo {
     flex-shrink: 0; // Firefox sets it to 1 unless explicitly expressed that is must be 0
-    width: 50%;
+    width: 100%;
+
+    @include rwd(400) {
+      width: 300px;
+      margin-right: auto;
+    }
 
     @include sm {
-      width: 26%;
+      width: 46%;
     }
 
     @include md {
