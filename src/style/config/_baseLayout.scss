@@ -38,56 +38,12 @@ html {
     }
 }
 
-@font-face {
-    font-family: Lato;
-    src: url('../fonts/Lato-Hairline.ttf');
-    font-weight: 100;
-}
+/*
+removes height: 100% on swiper slides,
+which allows for slides to be of the same height
+and not of it's content's height
+*/
 
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Thin.ttf");
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Light.ttf");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Regular.ttf");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Medium.ttf");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Semibold.ttf");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Bold.ttf");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Heavy.ttf");
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url("../fonts/Lato-Black.ttf");
-    font-weight: 900;
+.swiper-slide {
+    height: initial !important;
 }
