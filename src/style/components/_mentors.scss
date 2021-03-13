@@ -1,5 +1,5 @@
 .mentors {
-  margin: 0 1.5em 3em 1.5em;
+  margin: 0 1.5em 3em;
 
   @include md {
     margin-right: 80px;
@@ -57,49 +57,6 @@
 
   .swiper-slide {
     z-index: 1;
-  }
-
-  &__carousel {
-
-    &-prev,
-    &-next {
-      position: absolute;
-      z-index: 9999;
-      top: calc(50% - 17px);
-      background: transparent;
-      border: none;
-      width: 27px;
-      height: 17px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    &-prev svg,
-    &-next svg {
-      width: 27px;
-      height: 17px;
-      fill: $light-blue;
-      transition: fill .1s linear;
-    }
-
-    &-prev.inactive svg,
-    &-next.inactive svg {
-      fill: #7b7b7b;
-    }
-
-    &-prev {
-      left: -25px;
-
-      & svg {
-        transform: rotate(180deg);
-      }
-    }
-
-    &-next {
-      right: -25px;
-    }
   }
 
   &__commentary-container {
