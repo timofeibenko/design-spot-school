@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet">
-<!--    <script src='js/main.js' defer type="module"></script>-->
+    <!--    <script src='js/main.js' defer type="module"></script>-->
     <title>DesignSpotSchool</title>
     </head>
     <body>
@@ -55,14 +55,14 @@
                     <article class="mentors">
                         <h3 class="mentors__title">От кого?</h3>
                         <p class="mentors__subtitle">От менторов из <span>DesighSpot Community</span> и <span>Epam systems</span></p>
-                        <span class="mentors__n-of-commentaries"><span id="mentorsCommsQty"></span> комментариев</span>
+                        <span class="mentors__n-of-commentaries" id="mentorsCommsQty"></span>
                         <div class="mentors__btn-pos-wrap">
                             <div class="mentors__swiper-container swiper-container">
-                                <div class="mentors__carousel swiper-wrapper">
+                                <div class="mentors__slider swiper-wrapper">
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">Nikita Zenchenko</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -72,7 +72,7 @@
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">John Doe</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -82,7 +82,7 @@
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">John Doe</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -92,7 +92,7 @@
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">John Doe</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -102,7 +102,7 @@
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">John Doe</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -112,7 +112,7 @@
                                     <div class="mentors__commentary-container swiper-slide">
                                         <img class="mentors__photo"
                                              alt="A photo of mentor"
-                                             src="/"> <!-- src is set in main.js-->
+                                             src="/"> <!-- image is passed in main.js-->
                                         <div class="mentors__text-container">
                                             <h4 class="mentors__name">John Doe</h4>
                                             <span class="mentors__competence">Editor of DesignSpot</span>
@@ -121,13 +121,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="mentors__carousel-prev inactive">
+                            <button class="mentors__slider-prev slider-prev inactive">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
                                     <defs/>
                                     <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
                                 </svg>
                             </button>
-                            <button class="mentors__carousel-next">
+                            <button class="mentors__slider-next slider-next">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
                                     <defs/>
                                     <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
@@ -212,13 +212,56 @@
                                 <button class="its-free__play-btn play-btn"></button>
                             </div>
                         </div>
-                    </div>
                 </section> <!-- its-free -->
                 <section class="reviews">
                     <h3 class="reviews__title">Что говорят участники прошлого курса?</h3>
-                    <span class="reviews__count">Всего <span>25</span> отзывов</span>
+                    <div class="reviews__wrap">
+                        <span class="reviews__n-of-reviews">Всего <span id="reviewsQty">25 отзывов</span></span>
+                        <div class="reviews__swiper-container swiper-container">
+                            <div class="reviews__slider slider swiper-wrapper">
+                                <div class="reviews__review-container swiper-slide">
+                                    <h4 class="reviews__name">Арсений Васиновков</h4>
+                                    <span class="reviews__date">13.12.2019</span><span class="reviews__season">2 сезон</span>
+                                    <p class="reviews__copy">Я занимался дизайном год до старта курса, и был потрясен уровнем, было действительно интересно и одновременно сложно
+                                        Расслабляться вам не дадут:)</p>
+                                </div>
+                                <div class="reviews__review-container swiper-slide">
+                                    <h4 class="reviews__name">Арсений Васиновков</h4>
+                                    <span class="reviews__date">13.12.2019</span><span class="reviews__season">2 сезон</span>
+                                    <p class="reviews__copy">Курс дал отличную базу, как теоретическую, так и практическую. Большое спасибо преподавателю курса!</p>
+                                </div>
+                                <div class="reviews__review-container swiper-slide">
+                                    <h4 class="reviews__name">Арсений Васиновков</h4>
+                                    <span class="reviews__date">13.12.2019</span><span class="reviews__season">2 сезон</span>
+                                    <p class="reviews__copy">Программа понравилась, отзыв положительный. Сбалансировано подобраны теоретические и практические занятия. Понравился формат демонстрации проектов с обратной связью</p>
+                                </div>
+                                <div class="reviews__review-container swiper-slide">
+                                    <h4 class="reviews__name">Арсений Васиновков</h4>
+                                    <span class="reviews__date">13.12.2019</span><span class="reviews__season">2 сезон</span>
+                                    <p class="reviews__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit iure minus reiciendis repudiandae voluptatem?</p>
+                                </div>
+                                <div class="reviews__review-container swiper-slide">
+                                    <h4 class="reviews__name">Арсений Васиновков</h4>
+                                    <span class="reviews__date">13.12.2019</span><span class="reviews__season">2 сезон</span>
+                                    <p class="reviews__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit iure minus reiciendis repudiandae voluptatem?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="reviews__slider-prev slider-prev inactive">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
+                                <defs/>
+                                <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
+                            </svg>
+                        </button>
+                        <button class="reviews__slider-next slider-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
+                                <defs/>
+                                <path d="M11.0583 13.6379L.7256 3.8004l2.5727-2.444L16.6074 14 3.2983 26.6437.7256                                          24.1996l10.3327-9.8374.3803-.3622-.3803-.3621z"/>
+                            </svg>
+                        </button>
+                    </div>
                 </section>
             </main> <!-- main -->
         </div> <!-- wrap -->
     </body>
-    </html>
+</html>
