@@ -1,2 +1,4 @@
 import '../style/main.scss';
-import '../js/mentors'
+import '../js/declinationOfNum'
+import '../js/mentors';
+import '../js/reviews';
