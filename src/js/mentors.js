@@ -34,6 +34,7 @@ const mentorsSwiper = new Swiper('.mentors__swiper-container', {
     loop: false,
     slidesPerView: 1,
     spaceBetween: 10,
+    grabCursor: true,
 });
 
 mentorsPrevBtn.addEventListener('click', () => mentorsSwiper.slidePrev());

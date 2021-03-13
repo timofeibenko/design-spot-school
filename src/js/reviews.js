@@ -22,6 +22,7 @@ const reviewsSwiper = new Swiper('.reviews__swiper-container', {
     loop: false,
     slidesPerView: 'auto',
     spaceBetween: 8,
+    grabCursor: true,
 });
 
 reviewsPrevBtn.addEventListener('click', () => reviewsSwiper.slidePrev());
