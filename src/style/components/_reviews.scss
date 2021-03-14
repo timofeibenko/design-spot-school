@@ -44,6 +44,11 @@
     @extend .mentors__commentary;
   }
 
+  &__slider-prev,
+  &__slider-next {
+    top: 50%
+  }
+
   &__add-review-container {
     width: 100%;
   }
