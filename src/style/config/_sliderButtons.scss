@@ -7,7 +7,7 @@
     background: transparent;
     border: none;
     width: 27px;
-    height: 17px;
+    height: 27px;
 
     &:focus {
       outline: none;
@@ -17,7 +17,7 @@
   &-prev svg,
   &-next svg {
     width: 27px;
-    height: 17px;
+    height: 27px;
     fill: $light-blue;
     transition: fill .1s linear;
   }
