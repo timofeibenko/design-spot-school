@@ -107,7 +107,6 @@
 
   &__btn-container{
     @include flexible(center, center, column, nowrap);
-    gap: 9px;
     width: 100%;
     margin-bottom: 90px;
 
@@ -124,9 +123,10 @@
     @include transparent-btn(17px 1em 17px 1em, 0, calc(10px + 1.3vw));
     width: 100%;
     max-width: 319px;
+    margin-bottom: 8px;
 
     @include sm {
-      margin: 0;
+      margin-right: 8px;
     }
 
     @include md {
@@ -135,7 +135,7 @@
 
     @include lg {
       max-width: 428px;
-      margin: 0;
+      margin: 0 0 8px;
     }
   }
 
