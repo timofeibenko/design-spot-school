@@ -20,15 +20,31 @@ reviewsQty.innerHTML = `${reviewsSlidesQty.toString()} ${declinationOfNum(review
 const reviewsSwiper = new Swiper('.reviews__swiper-container', {
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 'auto',
     spaceBetween: 8,
     grabCursor: true,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        640: {
+            slidesPerView: 3,
+        },
+    }
 });
 
-reviewsPrevBtn.addEventListener('click', () => reviewsSwiper.slidePrev());
+reviewsPrevBtn.addEventListener('click', () => {
+    reviewsSwiper.slidePrev()
+    reviewsNextBtn.classList.remove('inactive');
+});
+
 reviewsNextBtn.addEventListener('click', () => reviewsSwiper.slideNext());
 
-reviewsSwiper.on("slideChange", function() {
+reviewsSwiper.on("slideChange", function () {
+
     if (this.realIndex === 0) {
         reviewsPrevBtn.classList.add('inactive')
     }
@@ -37,8 +53,11 @@ reviewsSwiper.on("slideChange", function() {
         reviewsNextBtn.classList.add('inactive')
     }
 
-    else {
+    else if (this.realIndex !== 0) {
         reviewsPrevBtn.classList.remove('inactive');
-        reviewsNextBtn.classList.remove('inactive');
     }
 });
+
+reviewsSwiper.on('reachEnd', function () {
+    reviewsNextBtn.classList.add('inactive')
+})
