@@ -1,0 +1,58 @@
+.registration {
+    margin: 0 1em 164px;
+    text-align: center;
+
+    &__title {
+        position: relative;
+        z-index: 99;
+        width: max-content;
+        margin: 0 auto 22px;
+        font-size: calc(25px + 3vw);
+        font-weight: 400;
+        color: $white;
+
+        @include md {
+            font-size: 52px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -99;
+            top: -7px;
+            left: -7px;
+            height: .8em;
+            width: .8em;
+            background: url('../img/aquamarine-stripes.svg') no-repeat;
+            background-size: cover;
+
+            @include md {
+                top: -30px;
+                left: -50px;
+                height: 72px;
+                width: 72px;
+            }
+        }
+    }
+
+    &__copy {
+        @extend .chat__copy;
+        max-width: 550px;
+        margin: 0 auto 56px;
+
+        @include md {
+            font-size: 24px;
+        }
+    }
+
+    &__btn {
+        @include sign-in-btn(19px 2.5em 19px 2.5em, 0, calc(10px + 1.3vw));
+        width: calc(250px + 2vw);
+
+        @include md {
+            font-size: 20px;
+            max-width: 427px;
+            width: 100%;
+        }
+    }
+}
