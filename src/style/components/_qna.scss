@@ -1,0 +1,112 @@
+.qna {
+    position: relative;
+    z-index: 99;
+    margin-bottom: 182px;
+    padding: 0 32px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -99;
+        top: 75px;
+        right: 7px;
+        display: block;
+        height: 45px;
+        width: 45px;
+        background: url(../img/main/blue-stripes.svg) no-repeat;
+        background-size: cover;
+
+        @include md {
+            top: 30px;
+            right: -25px;
+            height: 90px;
+            width: 90px;
+        }
+
+        @include xl {
+            right: 7px;
+        }
+    }
+
+    &__title {
+        @extend .mentors__title;
+        margin: 0 1em 48px;
+        text-align: center;
+    }
+
+    &__list-item {
+        padding: 16px 22px 16px 32px;
+        @include background-gradient(to left);
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &.active {
+            @include background-gradient(to right);
+        }
+
+        &-header {
+            @include flexible(space-between, center, row, nowrap);
+            width: 100%;
+        }
+
+        &-toggle {
+            height: 27px;
+            width: 27px;
+            margin-left: 1em;
+            background: transparent;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            & svg {
+                height: 27px;
+                width: 27px;
+                fill: $light-blue;
+                transform: rotate(90deg);
+                transition: all .3s ease;
+            }
+        }
+
+        &-q {
+            @extend .header__date;
+        }
+
+        &-footer {
+            width: 100%;
+            margin-top: 0;
+            transition: all .2s ease;
+        }
+
+        &-a {
+            @extend .mentors__commentary;
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            margin-bottom: 0;
+            opacity: 0;
+            transition: all .2s ease;
+
+        }
+
+        &.active &-toggle svg {
+            fill: $white;
+            transform: rotate(270deg);
+        }
+
+        &.active &-footer {
+            margin-top: 16px;
+        }
+
+        &.active &-a {
+            max-height: 100vh;
+            padding-top: 12px;
+            border-top: 1px solid $white;
+            opacity: 1;
+        }
+    }
+}
