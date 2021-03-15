@@ -6,6 +6,7 @@ html {
 .wrap {
     max-width: 1366px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .play-btn {
@@ -39,7 +40,7 @@ html {
 }
 
 /*
-removes height: 100% on swiper slides,
+removes height: 100%; on swiper slides,
 which allows for slides to be of the same height
 and not of it's content's height
 */
