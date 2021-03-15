@@ -7,18 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Timofei-Benko/design-spot-school.git"
   },
-  "author": "",
+  "author": "Timofei Benko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Timofei-Benko/design-spot-school/issues"
   },
-  "homepage": "https://github.com/Timofei-Benko/design-spot-school#readme",
+  "homepage": "https://timofei-benko.github.io/currency-converter/",
   "devDependencies": {
     "autoprefixer": "^10.2.4",
     "clean-webpack-plugin": "^3.0.0",
@@ -26,6 +28,7 @@
     "cssnano": "^4.1.10",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.1.0",
     "google-fonts-webpack-plugin": "^0.4.4",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^5.0.0-beta.6",
