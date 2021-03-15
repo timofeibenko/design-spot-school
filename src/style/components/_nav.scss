@@ -21,6 +21,7 @@
         font-family: 'Work Sans', sans-serif;
         font-size: 20px;
         line-height: 48px;
+        cursor: pointer;
     }
 
     &__logo-item {
@@ -82,41 +83,80 @@
 
     &__burger {
         position: relative;
-        height: 3px;
+        height: 10px;
         width: 30px;
-        margin: 0 20px 10px 0;
-        background-color: $aquamarine;
+        margin: auto 20px auto 0;
+        cursor: pointer;
 
         @include md {
             display: none;
         }
 
-        &::after {
-            content: "";
+        &-item-top {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: $aquamarine;
+            transition: all .2s ease-in-out;
+        }
+
+        &-item-bottom {
             position: absolute;
             top: 10px;
-
-            @extend .nav__burger;
+            height: 3px;
+            width: 100%;
+            background-color: $aquamarine;
+            transition: all .2s ease-in-out;
         }
+
+        &.active &-item-top {
+            transform: rotate(45deg);
+        }
+
+        &.active &-item-bottom {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
     }
 
     &__list {
-        display: none;
+        position: fixed;
+        top: 45px;
+        @include flexible(flex-start, flex-start, column, nowrap);
+        width: 100%;
+        background-color: $black;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all .3s ease-in-out;
 
         @include md {
-            display: block;
+            position: static;
+            @include flexible(flex-end, center, row, nowrap);
             height: 48px;
-            margin-right: 20px;
+            margin: 0 20px 0 auto;
+            transform: none;
+            opacity: 1;
+        }
+
+        &.burger-active {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
     &__link {
         position: relative;
+        width: 100%;
         margin: 0 1em;
         font-size: 18px;
         font-weight: 400;
         line-height: 48px;
         color: $dark-grey;
+
+        @include md {
+            width: initial;
+        }
 
         @include lg {
             margin: 0 1.5em;
@@ -130,12 +170,17 @@
         &:hover::after {
             content: "";
             position: absolute;
-            top: 30px;
-            left: -3px;
+            top: 40px;
             display: block;
             height: 3px;
-            width: calc(100% + 5px);
+            width: 100%;
             background-color: $aquamarine;
+
+            @include md {
+                top: 43px;
+                left: -3px;
+                width: calc(100% + 5px);
+            }
 
             @include lg {
                 width: calc(100% + 44px);
@@ -144,4 +189,3 @@
         }
     }
 }
-
