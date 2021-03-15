@@ -1,5 +1,7 @@
 # DesignSpotSchool
 
+You can watch the site live [here](https://timofei-benko.github.io/design-spot-school/).
+
 This project was made based on a figma mockup that was given to me by my mentor at TeachMeSkills where I studied 
 front-end 
 development. I have finally 
@@ -18,5 +20,4 @@ Mobile layout was conceptualized by me, the original had only the tablet and des
 * There's still a burger menu to be finished
 * The project bundles via 
 Webpack
-
-You can watch the site live here.
+  
