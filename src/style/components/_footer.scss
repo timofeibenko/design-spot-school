@@ -1,0 +1,74 @@
+.footer {
+    @include flexible(space-between, center, row, nowrap);
+    height: 98px;
+    width: 100%;
+    padding: 0 1em;
+    border-top: 1px solid $aquamarine;
+
+    @include md {
+        justify-content: flex-start;
+        padding: 0 60px;
+    }
+
+    @include rwd(1000) {
+        // for some reason it just doesn't work properly unless I do that with width, will figure out a proper way of fixing it later
+        width: calc(100% - 64px);
+        padding: 0;
+        margin: 0 32px;
+    }
+
+    &__link {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        height: 24px;
+        line-height: 24px;
+        padding-left: 30px;
+        color: $aquamarine;
+        font-size: 0;
+
+        @include rwd(1000) {
+            font-size: 16px;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+
+            @include sm {
+                margin-right: 64px;
+            }
+        }
+
+        &:last-of-type {
+            @include md {
+                margin-right: auto;
+            }
+        }
+
+        &--medium {
+            background: url("../img/footer/medium-icon.svg") no-repeat;
+            background-position-y: 3px;
+        }
+
+        &--facebook {
+            background: url("../img/footer/facebook-icon.svg") no-repeat;
+        }
+
+        &--comm-z {
+            background: url("../img/footer/comm-z-icon.png") no-repeat;
+            background-size: 24px;
+        }
+
+        &--telegram {
+            background: url("../img/footer/telegram-icon.svg") no-repeat;
+            background-position-y: 3px;
+        }
+    }
+
+    &__curriculum {
+        @include transparent-btn(.5em .5em, 0, calc(10px + 1vw));
+
+        @include  md {
+            @include transparent-btn(13px 18px, 0, 20px);
+        }
+    }
+}
